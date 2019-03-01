@@ -1,0 +1,50 @@
+<script>
+  Discourse.ExternalNavItem = Discourse.NavItem.extend({
+    href : function() {
+      return this.get('href');
+    }.property('href')
+  });
+
+  I18n.translations.es.js.filters.consultasap = { title: "Preguntas Abiertas", help: "Preguntas que esperan tus respuestas" };
+  I18n.translations.es.js.filters.consultasapb1 = { title: "Preguntas Abiertas (B1)", help: "Preguntas de B1 que esperan tus respuestas" };
+
+  Discourse.NavItem.reopenClass({
+    buildList : function(category, args) {
+      var list = this._super(category, args);
+      if(!category) {
+        list.push(Discourse.ExternalNavItem.create({href: '/category/consultas-sap/none?ascending=true&order=activity&status=open', name: 'consultasap'}));
+		list.push(Discourse.ExternalNavItem.create({href: '/category/sap-business-one?ascending=true&order=activity&status=open', name: 'consultasapb1'}));
+      }
+      return list;
+    }
+  });
+</script>
+
+<script type="text/javascript">
+    if(window.location.href === "https://foros.consultoria-sap.com/t/suscripciones-mensuales-membresias/6596") 
+    {
+        fbq('track', 'Subscribe');
+        var head = document.getElementsByTagName('body')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://embed.small.chat/T6VKPCQ9FG9WDDDU1L.js';
+        head.appendChild(script)
+    }
+</script>
+<script>
+if (window.jQuery) {
+    window.jQuery(function ($) {
+        var u = Discourse.User.current();
+        //console.log(u);
+        if (u !== null){
+            u.findDetails().then(function(u) {
+                //console.log(u.groups);
+    	        var arrayLength = u.groups.length;
+                for (var i = 0; i < arrayLength; i++) {
+    	            $('body').addClass('group-'+u.groups[i].name);
+    	        }
+            });
+        }
+    });
+};
+</script>

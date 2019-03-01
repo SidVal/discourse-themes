@@ -1,0 +1,213 @@
+/* Inicio codigo para menu superior */
+
+nav ul { 
+    text-align: center;
+}
+
+nav ul li { 
+    display: inline-block;
+}
+
+a:hover {
+    transition: color 150ms ease-out 0s;
+    color: rgb(44, 174, 195);
+}
+
+a {
+    transition: color 150ms ease-out 0s;
+    color: rgb(35, 137, 153);
+}
+
+nav#bar {
+    width: 100%;
+    height: 48px;
+    background: #1b1f20;
+    top: 20;
+    z-index: 1;
+}
+
+nav#bar a.nav-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 48px;
+    min-width: 90px;
+    font-size: 16px;
+    float: left;
+}
+
+nav#bar a.red.selected {
+  color: #d13332;
+  border-color: #d13332 !important; }
+
+nav#bar a.red:hover {
+  color: #d13332;
+  text-shadow: 0px 0px 5px #d13332; }
+
+nav#bar a.orange.selected {
+  color: #ea5932;
+  border-color: #ea5932 !important; }
+
+nav#bar a.orange:hover {
+  color: #ea5932;
+  text-shadow: 0px 0px 5px #ea5932; }
+
+nav#bar a.yellow.selected {
+  color: #fff9ae;
+  border-color: #fff9ae !important; }
+
+nav#bar a.yellow:hover {
+  color: #fff9ae;
+  text-shadow: 0px 0px 5px #fff9ae; }
+
+nav#bar a.green.selected {
+  color: #18b159;
+  border-color: #18b159 !important; }
+
+nav#bar a.green:hover {
+  color: #18b159;
+  text-shadow: 0px 0px 5px #18b159; }
+
+nav#bar a.blue.selected {
+  color: #00aeef;
+  border-color: #00aeef !important; }
+
+nav#bar a.blue:hover {
+  color: #00aeef;
+  text-shadow: 0px 0px 5px #00aeef; }
+
+nav#bar a.grey.selected {
+  color: #aaa;
+  border-color: #aaa !important; }
+
+nav#bar a.grey:hover {
+  color: #aaa;
+  text-shadow: 0px 0px 5px #aaa; }
+
+nav#bar a.nav-link.selected {
+  line-height: 42px;
+  border-top: 3px solid #0b0d0d;
+  background-color: #0b0d0d;
+  height: 45px;
+}
+
+/* fin codigo para menu superior */
+
+/* Inicio codigo para sobre-saltar los temas importantes */
+
+.list-container .has-excerpt .title {
+    background: rgba(251, 255, 0, 0.64);
+    padding: 0px 5px !important;
+    margin: -3px 0px;
+    line-height: 1.7;
+    border-radius: 20px;
+    display:inline-block;
+}
+
+/* fin codigo para sobre-saltar los temas importantes */
+
+//underline navigation links
+.nav-pills>li.active>a, .nav-pills>li>a.active {
+  color: $primary;
+  font-weight: 500;
+  background-color: $secondary;
+  border-bottom: 3px solid $tertiary;
+}
+
+//remove highlighting navigation background on hover
+.nav-pills > li > a:hover{
+    background-color: $secondary;
+}
+
+//raise and round buttons
+.btn:not(.bulk-select) {
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+//flatten editor buttons
+.d-editor-button-bar .btn{
+    border-radius: 0px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0),0 2px 10px 0 rgba(0,0,0,0);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0),0 2px 10px 0 rgba(0,0,0,0);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0),0 2px 10px 0 rgba(0,0,0,0);
+}
+
+//properly space buttons on login modal
+button#login-link, button#new-account-link{
+padding-left:inherit;
+}
+
+//darken color, remove shadow and border when pressed
+.btn:active{
+    background-color: rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0px 0px 0 rgba(0,0,0,0.16),0 0px 00px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 0px 0px 0 rgba(0,0,0,0.16),0 0px 00px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.16),0 0px 00px 0 rgba(0,0,0,0.12);
+    
+}
+.btn:focus{
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+//Reply Fab
+.timeline-footer-controls {
+    position: relative;
+}
+.widget-button.btn.create {
+    border-radius: 40px;
+    position: absolute;
+    top: 50px;
+    left: -18px;
+    z-index: 999;
+    padding: 24px 20px 22px 5px;
+    background-color: $tertiary;
+    color: white;
+    text-indent: 10px;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.14),0 4px 8px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.14),0 4px 8px rgba(0,0,0,0.28);
+    box-shadow: 0 0 4px rgba(0,0,0,0.14),0 4px 8px rgba(0,0,0,0.28);
+    overflow: hidden;
+    width: 63px;
+    height: 63px;
+    -webkit-transition: right .5s, bottom .5s, border-radius .5s, text-indent .2s, visibility 1s, width .2s ease, height .5s ease .4s, color .5s, background-color 2s, -webkit-transform .5s;
+    transition: right .5s, bottom .5s, border-radius .5s, text-indent .2s, visibility 1s, width .2s ease, height .5s ease .4s, color .5s, background-color 2s, transform .5s;
+}
+
+//Center and increase size of reply icon
+.widget-button.btn.create .fa-reply{
+    color: white;
+    font-size: 20px;
+    margin-left: -8px;
+}
+
+
+//Proper spacing for iPad portrait
+@media only screen 
+and (min-width : 768px)
+and (max-width: 1250px)
+{
+    .timeline-container {
+        margin-left: 820px;
+    }
+    .topic-admin-popup-menu{
+        left:-40% !important;
+        
+    }
+
+}
+
+//Properly space notifications button
+.widget-button.btn.notifications-dropdown{
+    right: 4px;
+    position: relative;
+    border-radius: 40px;
+    width: 30px;
+}
+
+.widget-button.btn.notifications-dropdown .fa{
+    margin-left: -2px;
+}
